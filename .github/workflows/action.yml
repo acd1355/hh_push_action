@@ -1,11 +1,12 @@
-name: Push Actions
+name: Pull Request Actions
 on:
-  push:
+  pull_request:
     branches:
-      - bugfix/git_status
+      - master
+      - develop
 jobs:
   build:
-    name: Build simple Project
+    name: Unit test
     runs-on: ubuntu-latest
     steps:
     - name: Checkout Project
