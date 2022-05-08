@@ -2,10 +2,10 @@ name: Push Actions
 on:
   push:
     branches:
-      - bugfix/git_status
+      - feature/*
 jobs:
   build:
-    name: Build simple Project
+    name: Feature branches build actions
     runs-on: ubuntu-latest
     steps:
     - name: Checkout Project

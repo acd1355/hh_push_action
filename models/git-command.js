@@ -34,6 +34,8 @@ class GitCommand {
             this.staging.push(modified_files[path_file]);
             delete modified_files[path_file];
         }
+
+        // this is a random comment to test github action
     }
 
     //Command: git commit -m "<message>"
