@@ -38,6 +38,6 @@ describe("Testing GitCommand.commit(message)", function(){
         git.init();
         let output = git.commit('No added files yet.');
 
-        expect(output).to.equal('Nothing to commit.');
+        expect(output).to.equal('Nothing to commit...');
     });
 });
