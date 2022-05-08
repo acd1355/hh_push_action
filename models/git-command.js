@@ -11,19 +11,9 @@ class GitCommand {
 
     //Command: git status
     status(){        
-        let keys = Object.keys(this.working_directory.files);
-        let numChange = keys.length;
-        let strChange = `You have ${numChange} change/s.\n`
-
-        for(let i = 0; i < numChange; i++){
-            strChange += `${keys[i]}`;
-
-            if(i < numChange - 1){
-                strChange += `\n`;
-            }
-        }
-        
-        return strChange;
+        /*
+            Create logic here and run unit testing.
+        */
     }
 
     //Command: git add <filename/file directory/wildcard> 
@@ -34,8 +24,6 @@ class GitCommand {
             this.staging.push(modified_files[path_file]);
             delete modified_files[path_file];
         }
-
-        // this is a random comment to test github action
     }
 
     //Command: git commit -m "<message>"
