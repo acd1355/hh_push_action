@@ -38,6 +38,8 @@ class GitCommand {
 
     //Command: git commit -m "<message>"
     commit(message){
+        let test = null; // this line is a random code to test github workflow
+
         if(this.staging.length > 0){
             this.local_repository.push({ "message": message, "files": this.staging });
             this.staging = [];
