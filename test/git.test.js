@@ -26,3 +26,18 @@ describe("Testing GitCommand.status()", function(){
         expect(output).to.equal('You have 0 change/s.\n');
     });
 })
+
+describe("Testing GitCommand.commit(message)", function(){
+
+    it('Should return message when there is nothing to commit', function(){
+        let wd = new WorkingDirectory();
+        wd.addFile("index.html", "views", "<html>Hello</html>");
+        wd.addFile("index.js", "assets/scripts", "alert('Hi!')");
+
+        let git = new GitCommand(wd);
+        git.init();
+        let output = git.commit('No added files yet.');
+
+        expect(output).to.equal('Nothing to commit.');
+    });
+});
